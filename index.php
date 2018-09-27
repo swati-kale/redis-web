@@ -12,7 +12,7 @@ try {
 
     $redis = new Predis\Client(array(
         "scheme" => "tcp",
-        "host" => "172.30.104.84",
+        "host" => "172.30.150.190",
         "port" => 6379));
 
     echo "Successfully connected to Redis";
