@@ -2,6 +2,13 @@
 require "/opt/app-root/src/predis/autoload.php";
 Predis\Autoloader::register();
 
+function test()
+{
+  static $count = 0;
+  echo $count;
+  $count++;
+}
+
 // since we connect to default setting localhost
 // and 6379 port there is no need for extra
 // configuration. If not then you can specify the
