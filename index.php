@@ -40,7 +40,7 @@ var_dump($counter_value);
     
     echo "<br><br>";
                                                                                 
-echo ($redis->exists("Santa Claus")) ? "true" : "false";
+echo ($redis->exists("Aliens")) ? "true" : "false";
 
 }
 catch (Exception $e) {
