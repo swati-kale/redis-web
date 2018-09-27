@@ -10,7 +10,7 @@ function test()
   return $count;
 }
 $counter = test();
-echo "The counter is = "
+echo "The counter is = ";
   var_dump($counter);
 
 echo "\n\n"
