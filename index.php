@@ -28,7 +28,7 @@ try {
 
     echo "Successfully connected to Redis";
 
-$redis->set("hello_world", "Hi from Swati!");                                     
+$redis->set("hello_world", "Hi from Swati!!!!");                                     
 $value = $redis->get("hello_world");                                            
 var_dump($value);    
     
