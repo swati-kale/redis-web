@@ -1,17 +1,22 @@
 <?php
 require "/opt/app-root/src/predis/autoload.php";
 Predis\Autoloader::register();
-global $count = 0;
-  
-function test()
-{
-  echo $count;
-  $count++;
-  return $count;
-}
-$counter = test();
-echo "The counter is = ";
-  var_dump($counter);
+
+<?php
+    if (!isset($_COOKIE['visits']))
+        $_COOKIE['visits'] = 0;
+    $visits = $_COOKIE['visits'] + 1;
+    setcookie('visits', $visits, time()+3600*24*365);
+?>
+
+<?php
+    if ($visits > 1) {
+        echo("This is visit number $visits.");
+    } else { // First visit
+        echo('Welcome to my Website! Click here for a tour!');
+    }
+?>
+
 
 echo "\n\n";
 // since we connect to default setting localhost
