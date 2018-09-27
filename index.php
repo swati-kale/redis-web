@@ -30,7 +30,15 @@ try {
 
 $redis->set("hello_world", "Hi from Swati!");                                     
 $value = $redis->get("hello_world");                                            
-var_dump($value);                                                               
+var_dump($value);    
+    
+    echo "<br><br>";
+    
+$redis->set("visit_counter", $i);                                     
+$counter_value = $redis->get("visit_counter");                                            
+var_dump($counter_value);    
+    
+    echo "<br><br>";
                                                                                 
 echo ($redis->exists("Santa Claus")) ? "true" : "false";
 
