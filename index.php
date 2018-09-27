@@ -2,23 +2,17 @@
 require "/opt/app-root/src/predis/autoload.php";
 Predis\Autoloader::register();
 
-<?php
-    if (!isset($_COOKIE['visits']))
-        $_COOKIE['visits'] = 0;
-    $visits = $_COOKIE['visits'] + 1;
-    setcookie('visits', $visits, time()+3600*24*365);
-?>
 
-<?php
-    if ($visits > 1) {
-        echo("This is visit number $visits.");
-    } else { // First visit
-        echo('Welcome to my Website! Click here for a tour!');
-    }
-?>
+session_start();
+
+$i = isset($_SESSION['i']) ? $_SESSION['i'] : 0;
+echo "Counter is = ";
+echo ++$i;
+
+$_SESSION['i'] = $i;
 
 
-echo "\n\n";
+echo "<br><br>";
 // since we connect to default setting localhost
 // and 6379 port there is no need for extra
 // configuration. If not then you can specify the
