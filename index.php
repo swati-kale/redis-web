@@ -1,10 +1,10 @@
 <?php
 require "/opt/app-root/src/predis/autoload.php";
 Predis\Autoloader::register();
-
+global $count = 0;
+  
 function test()
 {
-  static $count = 0;
   echo $count;
   $count++;
   return $count;
