@@ -32,7 +32,7 @@ try {
     
     $redis = new Predis\Client(array(
         "scheme" => "tcp",
-        "host" => "rfs-redisfailover.ha-redis-cluster.svc",
+        "host" => "172.30.85.91",
         "port" => 6379));
 
     
