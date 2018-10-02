@@ -29,11 +29,15 @@ try {
         //"host" => "172.30.150.190",
        // "port" => 6379));
 
+    $sentinels = [
+	'tcp://172.30.85.91:26379'
+];
+$options = [
+	'replication' => 'sentinel',
+	'service' => 'mymaster'
+];
     
-    $redis = new Predis\Client(array(
-        "scheme" => "tcp",
-        "host" => "172.30.85.91",
-        "port" => 26379));
+    $redis = new Predis\Client($sentinels, $options);
 
     
     echo "Successfully connected to Redis";
@@ -42,7 +46,7 @@ $redis->set("hello_world", "Hi from Swati Kale!!!!");
 $value = $redis->get("hello_world");                                            
 var_dump($value);    
     
-    echo "<br><br>";
+    echo "<br>*****<br>";
     
 $redis->set("visit_counter", $i);                                     
 $counter_value = $redis->get("visit_counter");                                            
@@ -54,6 +58,6 @@ echo ($redis->exists("Aliens")) ? "true" : "false";
 
 }
 catch (Exception $e) {
-    echo "Couldn't connected to Redis";
+    echo "<br>Error encountered.<br>";
     echo $e->getMessage();
 }
