@@ -37,7 +37,7 @@ $options = [
 	'service' => 'mymaster'
 ];
     
-    $redis = new Predis\Client($sentinels, $options);
+    $redis = new \Predis\Client($sentinels, $options);
 
     
     echo "Successfully connected to Redis";
