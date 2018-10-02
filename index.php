@@ -20,7 +20,7 @@ echo "<br><br>";
 // to the constructor.
 try {
 //    $redis = new Predis\Client();
-//rfs-redisfailover.ha-redis-cluster.svc - 172.30.85.91
+//rfs-redisfailover.ha-redis-cluster.svc - 172.30.85.91 or 10.129.2.107?
     
     
     
@@ -32,7 +32,7 @@ try {
     
     $redis = new Predis\Client(array(
         "scheme" => "tcp",
-        "host" => "172.30.85.91",
+        "host" => "10.129.2.107",
         "port" => 6379));
 
     
