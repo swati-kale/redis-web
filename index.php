@@ -24,19 +24,12 @@ try {
     
     
     
-    //$redis = new Predis\Client(array(
-      //  "scheme" => "tcp",
-        //"host" => "172.30.150.190",
-       // "port" => 6379));
+    $redis = new Predis\Client(array(
+        "scheme" => "tcp",
+        "host" => "172.30.150.190",
+       "port" => 6379));
 
-    $sentinels = [
-	'tcp://172.30.85.91:26379'
-];
-$options = [
-	'service' => 'mymaster'
-];
-    
-    $redis = new \Predis\Client($sentinels, $options);
+   
 
     
     echo "Successfully connected to Redis";
