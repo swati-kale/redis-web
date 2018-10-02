@@ -33,7 +33,6 @@ try {
 	'tcp://172.30.85.91:26379'
 ];
 $options = [
-	'replication' => 'sentinel',
 	'service' => 'mymaster'
 ];
     
