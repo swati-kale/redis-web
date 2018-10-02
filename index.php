@@ -20,15 +20,25 @@ echo "<br><br>";
 // to the constructor.
 try {
 //    $redis = new Predis\Client();
+//rfs-redisfailover.ha-redis-cluster.svc - 172.30.85.91
+    
+    
+    
+    //$redis = new Predis\Client(array(
+      //  "scheme" => "tcp",
+        //"host" => "172.30.150.190",
+       // "port" => 6379));
 
+    
     $redis = new Predis\Client(array(
         "scheme" => "tcp",
-        "host" => "172.30.150.190",
+        "host" => "rfs-redisfailover.ha-redis-cluster.svc",
         "port" => 6379));
 
+    
     echo "Successfully connected to Redis";
 
-$redis->set("hello_world", "Hi from Swati!!!!");                                     
+$redis->set("hello_world", "Hi from Swati Kale!!!!");                                     
 $value = $redis->get("hello_world");                                            
 var_dump($value);    
     
