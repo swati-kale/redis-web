@@ -24,12 +24,12 @@ try {
     
     
     
-    //$redis = new Predis\Client(array("scheme" => "tcp","host" => "172.30.85.91","port" => 26379));
+    $redis = new Predis\Client(array("scheme" => "tcp","host" => "10.131.2.31","port" => 6379));
 
-   $sentinels = ['tcp://172.30.85.91'];
-$options   = ['replication' => 'sentinel', 'service' => 'mymaster'];
+   //$sentinels = ['tcp://172.30.85.91'];
+//$options   = ['replication' => 'sentinel', 'service' => 'mymaster'];
 
-$redis = new Predis\Client($sentinels, $options);
+//$redis = new Predis\Client($sentinels, $options);
 
     
     echo "Successfully connected to Redis";
