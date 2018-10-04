@@ -26,8 +26,8 @@ try {
     
     $redis = new Predis\Client(array(
         "scheme" => "tcp",
-        "host" => "172.30.150.190",
-       "port" => 6379));
+        "host" => "172.30.85.91",
+       "port" => 26379));
 
    
 
