@@ -24,7 +24,7 @@ try {
 //$redis = new Predis\Client($sentinels, $options);
     
     echo "Successfully connected to Redis";
-$redis->set("hello_world", "Hi from Swati Kale!!!!");                                     
+$redis->set("hello_world", "Hi from Swati Kale!");                                     
 $value = $redis->get("hello_world");                                            
 var_dump($value);    
     
