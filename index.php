@@ -25,7 +25,7 @@ try {
     
     
     
- $redis = new Predis\Client(array("scheme" => "tcp","host" => "172.30.19.212","port" => 6379));
+ $redis = new Predis\Client(array("scheme" => "tcp","host" => "10.128.5.3","port" => 19861));
     
    //$sentinels = ['tcp://172.30.85.91'];
 //$options   = ['replication' => 'sentinel', 'service' => 'mymaster'];
