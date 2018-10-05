@@ -6,11 +6,12 @@ Predis\Autoloader::register();
 session_start();
 
 $i = isset($_SESSION['i']) ? $_SESSION['i'] : 0;
+ echo "Counter is = ";
+    echo ++$i;
 
 $_SESSION['i'] = $i;
 
- echo "Counter is = ";
-    echo ++$i;
+
 
 echo "<br><br>";
 // since we connect to default setting localhost
