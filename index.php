@@ -9,6 +9,8 @@ $i = isset($_SESSION['i']) ? $_SESSION['i'] : 0;
 
 $_SESSION['i'] = $i;
 
+ echo "Counter is = ";
+    echo ++$i;
 
 echo "<br><br>";
 // since we connect to default setting localhost
@@ -33,8 +35,7 @@ try {
     echo "Successfully connected to Redis";
 
 
-    echo "Counter is = ";
-    echo ++$i;
+   
 
     
 $redis->set("hello_world", "Hi from Swati Kale!!!!");                                     
