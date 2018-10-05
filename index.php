@@ -6,7 +6,6 @@ Predis\Autoloader::register();
 session_start();
 
 $i = isset($_SESSION['i']) ? $_SESSION['i'] : 0;
-echo "Counter is = ";
 
 $_SESSION['i'] = $i;
 
@@ -33,6 +32,8 @@ try {
     
     echo "Successfully connected to Redis";
 
+
+    echo "Counter is = ";
     echo ++$i;
 
     
