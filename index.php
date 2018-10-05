@@ -7,7 +7,6 @@ session_start();
 
 $i = isset($_SESSION['i']) ? $_SESSION['i'] : 0;
 echo "Counter is = ";
-echo ++$i;
 
 $_SESSION['i'] = $i;
 
@@ -24,8 +23,8 @@ try {
     
     
     
-    $redis = new Predis\Client(array("scheme" => "tcp","host" => "redis-ent-cluster-0","port" => 8443));
-
+ $redis = new Predis\Client(array("scheme" => "tcp","host" => "172.30.19.212","port" => 6379));
+    
    //$sentinels = ['tcp://172.30.85.91'];
 //$options   = ['replication' => 'sentinel', 'service' => 'mymaster'];
 
@@ -34,6 +33,9 @@ try {
     
     echo "Successfully connected to Redis";
 
+    echo ++$i;
+
+    
 $redis->set("hello_world", "Hi from Swati Kale!!!!");                                     
 $value = $redis->get("hello_world");                                            
 var_dump($value);    
