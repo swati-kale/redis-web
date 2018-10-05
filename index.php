@@ -24,8 +24,8 @@ try {
 //rfs-redisfailover.ha-redis-cluster.svc - 172.30.85.91 or 10.129.2.107?
     
     
-    
- $redis = new Predis\Client(array("scheme" => "tcp","host" => "172.30.19.212","port" => 6379));
+     $redis = new Predis\Client(array("scheme" => "tcp","host" => "172.30.19.212","port" => 6379));
+
     
    //$sentinels = ['tcp://172.30.85.91'];
 //$options   = ['replication' => 'sentinel', 'service' => 'mymaster'];
