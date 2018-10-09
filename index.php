@@ -18,7 +18,7 @@ try {
     
     
     
-    $redis = new Predis\Client(array("scheme" => "tcp","host" => "redis-ent-cluster-redis-ent-cluster.app.rhdp.ocp.cloud.lab.eng.bos.redhat.com","port" => 8001));
+    $redis = new Predis\Client(array("scheme" => "tcp","host" => "10.128.5.10","port" => 8001));
    //$sentinels = ['tcp://172.30.85.91'];
 //$options   = ['replication' => 'sentinel', 'service' => 'mymaster'];
 //$redis = new Predis\Client($sentinels, $options);
