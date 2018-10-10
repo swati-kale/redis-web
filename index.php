@@ -21,7 +21,9 @@ try {
    // $redis = new Predis\Client(array("scheme" => "tcp","host" => "10.128.5.10","port" => 8001));
     
 //$redis = new Predis\Client(array("scheme" => "tcp","host" => "172.30.57.94","port" => 6379));
-    $redis = new Predis\Client(array("scheme" => "tcp","host" => "10.129.2.81","port" => 14626,"password"=> "testdb"));
+    //$redis = new Predis\Client(array("scheme" => "tcp","host" => "10.129.2.81","port" => 14626,"password"=> "testdb"));
+    //redis-14626.redis-ent-cluster.redis-ent-cluster.svc.cluster.local
+     $redis = new Predis\Client(array("scheme" => "tcp","host" => "redis-14626.redis-ent-cluster.redis-ent-cluster.svc.cluster.local","port" => 14626,"password"=> "testdb"));
    //$sentinels = ['tcp://172.30.85.91'];
 //$options   = ['replication' => 'sentinel', 'service' => 'mymaster'];
 //$redis = new Predis\Client($sentinels, $options);
