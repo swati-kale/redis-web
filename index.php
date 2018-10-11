@@ -39,6 +39,11 @@ $redis->set("visit_counter", $i);
 $counter_value = $redis->get("visit_counter");                                            
 var_dump($counter_value);    
     
+    
+    $mkv = array('usr:0001' => 'First user', 'usr:0002' => 'Second user', 'usr:0003' => 'Third user');
+$redis->mset($mkv);
+$retval = $redis->mget(array_keys($mkv));
+print_r($retval)
     echo "<br><br>";
                                                                                 
 //echo ($redis->exists("Aliens")) ? "true" : "false";
