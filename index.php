@@ -43,7 +43,7 @@ $counter_value = $redis->get("visit_counter");
 var_dump($counter_value);    
     
     
-    $mkv = array('usr:0001' => 'First user', 'usr:0002' => 'Second user', 'usr:0003' => 'Third user');
+    $mkv = array('usr:0001' => 'OpenShift', 'usr:0002' => 'Fuse', 'usr:0003' => 'AMQ');
 $redis->mset($mkv);
 $retval = $redis->mget(array_keys($mkv));
 print_r($retval);
